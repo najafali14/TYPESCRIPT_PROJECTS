@@ -1,5 +1,7 @@
+
+// # Explanation video: https://youtu.be/41hGqZD5qY8
 import inquirer from 'inquirer';
-// functions creations for calculator
+// functions creations for BMI calculator
 async function calculator(){
   let {weight,height} = await inquirer.prompt([
     {
