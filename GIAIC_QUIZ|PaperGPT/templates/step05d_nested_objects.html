@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .question pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz: Nested Objects</h1>
+
+        <form id="quiz-form" method="post" action="/step05d_nested_objects">
+
+            <div class="question">
+                <p>1. What is the correct way to define the type for an author in a nested object?</p>
+                <pre>
+<code>
+type Author = {
+    firstName: string;
+    lastName: string;
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) type Author = { firstName: number; lastName: string; }</label>
+                    <label><input type="radio" name="q1" value="B"> B) type Author = { firstName: string; lastName: string; }</label>
+                    <label><input type="radio" name="q1" value="C"> C) type Author = { firstName: string; lastName: number; }</label>
+                    <label><input type="radio" name="q1" value="D"> D) type Author = { firstName: boolean; lastName: string; }</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. How would you define the type for a book that has an author and a name?</p>
+                <pre>
+<code>
+type Book = {
+    author: Author;
+    name: string;
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) type Book = { author: string; name: string; }</label>
+                    <label><input type="radio" name="q2" value="B"> B) type Book = { author: Author; name: string; }</label>
+                    <label><input type="radio" name="q2" value="C"> C) type Book = { author: Author; name: number; }</label>
+                    <label><input type="radio" name="q2" value="D"> D) type Book = { author: string; name: number; }</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What will the following TypeScript code output?</p>
+                <pre>
+<code>
+const myBook: Book = {
+    author: {
+        firstName: "Zia",
+        lastName: "Khan"
+    },
+    name: "My Best Book"
+};
+
+console.log(myBook.author.firstName);
+console.log(myBook.name);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Zia, My Best Book</label>
+                    <label><input type="radio" name="q3" value="B"> B) Khan, My Best Book</label>
+                    <label><input type="radio" name="q3" value="C"> C) Zia, Khan</label>
+                    <label><input type="radio" name="q3" value="D"> D) My Best Book, Zia</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Which of the following correctly creates a Book object?</p>
+                <pre>
+<code>
+type Author = {
+    firstName: string;
+    lastName: string;
+};
+
+type Book = {
+    author: Author;
+    name: string;
+};
+
+const myBook: Book = {
+    author: {
+        firstName: "Zia",
+        lastName: "Khan"
+    },
+    name: "My Best Book"
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) const myBook: Book = { author: { firstName: 123, lastName: "Khan" }, name: "My Best Book" };</label>
+                    <label><input type="radio" name="q4" value="B"> B) const myBook: Book = { author: { firstName: "Zia", lastName: "Khan" }, name: "My Best Book" };</label>
+                    <label><input type="radio" name="q4" value="C"> C) const myBook: Book = { author: { firstName: "Zia", lastName: 123 }, name: "My Best Book" };</label>
+                    <label><input type="radio" name="q4" value="D"> D) const myBook: Book = { author: { firstName: "Zia" }, name: "My Best Book" };</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Why does the following TypeScript code cause an error?</p>
+                <pre>
+<code>
+const myBook: Book = {
+    author: {
+        firstName: "Zia"
+    },
+    name: "My Best Book"
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) The property "firstName" is not defined in Author</label>
+                    <label><input type="radio" name="q5" value="B"> B) The property "lastName" is missing in the Author object</label>
+                    <label><input type="radio" name="q5" value="C"> C) The property "name" is missing in the Book object</label>
+                    <label><input type="radio" name="q5" value="D"> D) The property "author" is missing in the Book object</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is the type of the "author" property in the Book type?</p>
+                <pre>
+<code>
+type Book = {
+    author: Author;
+    name: string;
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) string</label>
+                    <label><input type="radio" name="q6" value="B"> B) number</label>
+                    <label><input type="radio" name="q6" value="C"> C) Author</label>
+                    <label><input type="radio" name="q6" value="D"> D) object</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. How would you access the "lastName" property of the author of a book?</p>
+                <pre>
+<code>
+const myBook: Book = {
+    author: {
+        firstName: "Zia",
+        lastName: "Khan"
+    },
+    name: "My Best Book"
+};
+
+// Access lastName property
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) myBook.lastName</label>
+                    <label><input type="radio" name="q7" value="B"> B) myBook.author.lastName</label>
+                    <label><input type="radio" name="q7" value="C"> C) myBook["lastName"]</label>
+                    <label><input type="radio" name="q7" value="D"> D) myBook["author"].lastName</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. Which TypeScript type allows an object with optional properties?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Partial</label>
+                    <label><input type="radio" name="q8" value="B"> B) Required</label>
+                    <label><input type="radio" name="q8" value="C"> C) Readonly</label>
+                    <label><input type="radio" name="q8" value="D"> D) Record</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. What is the correct syntax to define an object with optional properties in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) type Person = { name: string; age: number? }</label>
+                    <label><input type="radio" name="q9" value="B"> B) type Person = { name: string; age?: number }</label>
+                    <label><input type="radio" name="q9" value="C"> C) type Person = { name?: string; age: number }</label>
+                    <label><input type="radio" name="q9" value="D"> D) type Person = { name?: string; age?: number }</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What happens when you assign an object literal with excess properties to a variable in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) It causes a compilation error</label>
+                    <label><input type="radio" name="q10" value="B"> B) TypeScript automatically removes the excess properties</label>
+                    <label><input type="radio" name="q10" value="C"> C) TypeScript allows the assignment without any issues</label>
+                    <label><input type="radio" name="q10" value="D"> D) It causes a runtime error</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+
+        </form>
+
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+
+</body>
+</html>

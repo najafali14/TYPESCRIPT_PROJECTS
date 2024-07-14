@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .question pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz: Aliased and Interfaced Objects</h1>
+
+        <form id="quiz-form" method="post" action="/step05b_object_aliased">
+
+            <div class="question">
+                <p>1. What will the following TypeScript code output?</p>
+                <pre>
+<code>
+let teacher: { name: string, exp: number } = {
+    name: "Zeeshan",
+    exp: 10
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) { name: "Zeeshan", exp: 10 }</label>
+                    <label><input type="radio" name="q1" value="B"> B) { name: string, exp: number }</label>
+                    <label><input type="radio" name="q1" value="C"> C) { name: any, exp: any }</label>
+                    <label><input type="radio" name="q1" value="D"> D) { }</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. What is the type of the <code>student</code> object in the following TypeScript code?</p>
+                <pre>
+<code>
+type Student = {
+    name: string,
+    age?: number
+};
+
+let student: Student = {
+    name: "Hira",
+    age: 30
+};
+
+console.log(student["name"]);
+console.log(student.age);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) { name: string, age?: number }</label>
+                    <label><input type="radio" name="q2" value="B"> B) { name: any, age: any }</label>
+                    <label><input type="radio" name="q2" value="C"> C) { name: "Hira", age: 30 }</label>
+                    <label><input type="radio" name="q2" value="D"> D) { }</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What will TypeScript infer the type of the <code>teacher</code> object to be?</p>
+                <pre>
+<code>
+let teacher: { name: string, exp: number } = {
+    name: "Zeeshan",
+    exp: 10
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) { name: string, exp: number }</label>
+                    <label><input type="radio" name="q3" value="B"> B) { name: any, exp: any }</label>
+                    <label><input type="radio" name="q3" value="C"> C) { name: "Zeeshan", exp: 10 }</label>
+                    <label><input type="radio" name="q3" value="D"> D) { }</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Which of the following is a valid assignment to the <code>student</code> object?</p>
+                <pre>
+<code>
+type Student = {
+    name: string,
+    age?: number
+};
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) student = { name: "Ali", age: 25 };</label>
+                    <label><input type="radio" name="q4" value="B"> B) student = { name: "Ali" };</label>
+                    <label><input type="radio" name="q4" value="C"> C) student = { name: "Ali", age: "25" };</label>
+                    <label><input type="radio" name="q4" value="D"> D) student = { age: 25 };</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What will the following TypeScript code output?</p>
+                <pre>
+<code>
+interface Manager {
+    name: string,
+    subordinates?: number
+}
+
+let storeManager: Manager = {
+    name: "Bilal"
+};
+
+console.log(storeManager.name);
+console.log(storeManager.subordinates);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) Bilal, undefined</label>
+                    <label><input type="radio" name="q5" value="B"> B) "Bilal", undefined</label>
+                    <label><input type="radio" name="q5" value="C"> C) "Bilal", null</label>
+                    <label><input type="radio" name="q5" value="D"> D) Bilal, 0</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is the purpose of using type aliases in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) To provide custom names for types</label>
+                    <label><input type="radio" name="q6" value="B"> B) To allow dynamic typing</label>
+                    <label><input type="radio" name="q6" value="C"> C) To convert all types to strings</label>
+                    <label><input type="radio" name="q6" value="D"> D) To disable type checking</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What will the following TypeScript code output?</p>
+                <pre>
+<code>
+type Student = {
+    name: string,
+    age?: number
+};
+
+let student: Student = {
+    name: "Hira"
+};
+
+console.log(student.name);
+console.log(student.age);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Hira, undefined</label>
+                    <label><input type="radio" name="q7" value="B"> B) "Hira", undefined</label>
+                    <label><input type="radio" name="q7" value="C"> C) Hira, null</label>
+                    <label><input type="radio" name="q7" value="D"> D) "Hira", 0</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. Which of the following statements is true about TypeScript interfaces?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Interfaces can define optional properties</label>
+                    <label><input type="radio" name="q8" value="B"> B) Interfaces cannot have optional properties</label>
+                    <label><input type="radio" name="q8" value="C"> C) Interfaces can only define string properties</label>
+                    <label><input type="radio" name="q8" value="D"> D) Interfaces are used for type casting</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. How do you declare an optional property in a TypeScript interface?</p>
+                <pre>
+<code>
+interface Manager {
+    name: string,
+    subordinates?: number
+}
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) By using a question mark after the property name</label>
+                    <label><input type="radio" name="q9" value="B"> B) By using a dollar sign before the property name</label>
+                    <label><input type="radio" name="q9" value="C"> C) By using the "optional" keyword</label>
+                    <label><input type="radio" name="q9" value="D"> D) By using the "nullable" keyword</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What is the purpose of using interfaces in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) To provide a blueprint for objects</label>
+                    <label><input type="radio" name="q10" value="B"> B) To enforce a variable to have a specific value</label>
+                    <label><input type="radio" name="q10" value="C"> C) To allow a variable to have any type</label>
+                    <label><input type="radio" name="q10" value="D"> D) To disable type checking</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

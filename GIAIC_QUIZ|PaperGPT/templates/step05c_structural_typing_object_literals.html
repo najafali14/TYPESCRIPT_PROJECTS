@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .question pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz: Structural Typing and Object Literals</h1>
+
+        <form id="quiz-form" method="post" action="/step05c_structural_typing_object_literals">
+
+            <div class="question">
+                <p>1. What will the following TypeScript code output?</p>
+                <pre>
+<code>
+interface Ball {
+    diameter: number;
+}
+
+interface Sphere {
+    diameter: number;
+}
+
+let ball: Ball = { diameter: 10 };
+let sphere: Sphere = { diameter: 20 };
+
+sphere = ball;
+ball = sphere;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) No Error</label>
+                    <label><input type="radio" name="q1" value="B"> B) Error</label>
+                    <label><input type="radio" name="q1" value="C"> C) No output</label>
+                    <label><input type="radio" name="q1" value="D"> D) Undefined</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Why does the following TypeScript code cause an error?</p>
+                <pre>
+<code>
+interface Tube {
+    diameter: number;
+    length: number;
+}
+
+let tube: Tube = { diameter: 12, length: 3 };
+
+//tube = ball; // Error
+ball = tube;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Tube has more properties than Ball</label>
+                    <label><input type="radio" name="q2" value="B"> B) Tube has fewer properties than Ball</label>
+                    <label><input type="radio" name="q2" value="C"> C) Ball has different properties than Tube</label>
+                    <label><input type="radio" name="q2" value="D"> D) Ball is not an interface</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What will the following TypeScript code output?</p>
+                <pre>
+<code>
+let myType = { name: "Zia", id: 1 };
+
+//Case 1
+myType = { id: 2, name: "Tom" };
+
+//Case 2a
+myType = { id: 2, name_person: "Tom" };
+
+//Case 2b
+var x: { id: number, [x: string]: any };
+x = { id: 1, fullname: "Zia" };
+
+//Case 3
+myType = { id: 2, name: "Tom", age: 22 };
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) No Error</label>
+                    <label><input type="radio" name="q3" value="B"> B) Error on Case 2a and Case 3</label>
+                    <label><input type="radio" name="q3" value="C"> C) Error on Case 2a only</label>
+                    <label><input type="radio" name="q3" value="D"> D) Error on Case 2b</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Why does Case 2a in the following TypeScript code cause an error?</p>
+                <pre>
+<code>
+let myType = { name: "Zia", id: 1 };
+
+//Case 2a
+myType = { id: 2, name_person: "Tom" };
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) The property "name_person" is not defined in the type of myType</label>
+                    <label><input type="radio" name="q4" value="B"> B) The property "id" is not a number</label>
+                    <label><input type="radio" name="q4" value="C"> C) "name_person" should be a number</label>
+                    <label><input type="radio" name="q4" value="D"> D) The property "name_person" is misspelled</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What does the index signature in the following TypeScript code allow?</p>
+                <pre>
+<code>
+var x: { id: number, [x: string]: any };
+x = { id: 1, fullname: "Zia" };
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) It allows excess properties in fresh objects</label>
+                    <label><input type="radio" name="q5" value="B"> B) It disallows excess properties in fresh objects</label>
+                    <label><input type="radio" name="q5" value="C"> C) It allows only string properties</label>
+                    <label><input type="radio" name="q5" value="D"> D) It disallows only string properties</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is the difference between fresh and stale objects in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Fresh objects cannot have excess properties, but stale objects can</label>
+                    <label><input type="radio" name="q6" value="B"> B) Fresh objects can have excess properties, but stale objects cannot</label>
+                    <label><input type="radio" name="q6" value="C"> C) Fresh objects are always type checked, but stale objects are not</label>
+                    <label><input type="radio" name="q6" value="D"> D) There is no difference</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Why does the following TypeScript code not cause an error?</p>
+                <pre>
+<code>
+let myType2 = { id: 2, name: "Tom" };
+myType = myType2;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Because myType2 has the same properties as myType</label>
+                    <label><input type="radio" name="q7" value="B"> B) Because myType2 is a fresh object</label>
+                    <label><input type="radio" name="q7" value="C"> C) Because myType2 is a stale object</label>
+                    <label><input type="radio" name="q7" value="D"> D) Because myType2 is a string</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What is the result of the following TypeScript code?</p>
+                <pre>
+<code>
+let myType3 = { id: 2, name_person: "Tom" };
+myType = myType3;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Error, renamed or missing property</label>
+                    <label><input type="radio" name="q8" value="B"> B) No Error</label>
+                    <label><input type="radio" name="q8" value="C"> C) The code will not compile</label>
+                    <label><input type="radio" name="q8" value="D"> D) The code will run but produce a runtime error</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Why does the following TypeScript code not cause an error?</p>
+                <pre>
+<code>
+var y = { id: 1, fullname: "Zia" };
+x = y;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) Because the index signature allows excess properties</label>
+                    <label><input type="radio" name="q9" value="B"> B) Because the index signature disallows excess properties</label>
+                    <label><input type="radio" name="q9" value="C"> C) Because y has the same properties as x</label>
+                    <label><input type="radio" name="q9" value="D"> D) Because y is a string</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What is the result of the following TypeScript code?</p>
+                <pre>
+<code>
+var myType4 = { id: 2, name: "Tom", age: 22 };
+myType = myType4;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) No Error, excess property allowed in case of stale object</label>
+                    <label><input type="radio" name="q10" value="B"> B) Error, excess property not allowed</label>
+                    <label><input type="radio" name="q10" value="C"> C) Error, renamed or missing property</label>
+                    <label><input type="radio" name="q10" value="D"> D) The code will not compile</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

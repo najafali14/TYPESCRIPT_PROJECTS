@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz: Native ECMAScript Modules in Node.js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz: Native ECMAScript Modules in Node.js</h1>
+
+        <form id="quiz-form" method="post" action="/step03b_native_ECMAScript_modules">
+
+            <div class="question">
+                <p>1. What is the recommended module setting in <code>tsconfig.json</code> for using ECMAScript modules (ESM) in Node.js?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) <code>"module": "commonjs"</code></label>
+                    <label><input type="radio" name="q1" value="B"> B) <code>"module": "nodenext"</code></label>
+                    <label><input type="radio" name="q1" value="C"> C) <code>"module": "esnext"</code></label>
+                    <label><input type="radio" name="q1" value="D"> D) <code>"module": "es2020"</code></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. What does setting <code>"type": "module"</code> in <code>package.json</code> indicate?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Use CommonJS modules</label>
+                    <label><input type="radio" name="q2" value="B"> B) Use ECMAScript modules (ESM)</label>
+                    <label><input type="radio" name="q2" value="C"> C) Use AMD modules</label>
+                    <label><input type="radio" name="q2" value="D"> D) Use UMD modules</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. How does TypeScript handle imports in native ECMAScript modules (ESM)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Use <code>require()</code> syntax</label>
+                    <label><input type="radio" name="q3" value="B"> B) Use <code>import</code> syntax with <code>.js</code> file extension</label>
+                    <label><input type="radio" name="q3" value="C"> C) Use <code>import</code> syntax without <code>.js</code> file extension</label>
+                    <label><input type="radio" name="q3" value="D"> D) Use <code>module.exports</code> syntax</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. What error might occur if a Node.js script with native ECMAScript modules (ESM) is run without proper configuration?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) Compilation error</label>
+                    <label><input type="radio" name="q4" value="B"> B) Runtime error: <code>exports is not defined</code></label>
+                    <label><input type="radio" name="q4" value="C"> C) Syntax error: missing <code>.cjs</code> file extension</label>
+                    <label><input type="radio" name="q4" value="D"> D) No error, automatic fallback to CommonJS</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. How can TypeScript be configured to target ECMAScript modules (ESM) when transpiling?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) <code>--module commonjs</code></label>
+                    <label><input type="radio" name="q5" value="B"> B) <code>--module es2015</code></label>
+                    <label><input type="radio" name="q5" value="C"> C) <code>--module esnext</code></label>
+                    <label><input type="radio" name="q5" value="D"> D) <code>--module esm</code></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is a significant benefit of using native ECMAScript modules (ESM) over CommonJS in Node.js?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Better performance in development environments</label>
+                    <label><input type="radio" name="q6" value="B"> B) Improved support for circular dependencies</label>
+                    <label><input type="radio" name="q6" value="C"> C) Enhanced compatibility with TypeScript decorators</label>
+                    <label><input type="radio" name="q6" value="D"> D) Easier interoperability with browser JavaScript</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Which scenario would prompt the use of native ECMAScript modules (ESM) over CommonJS?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Legacy Node.js applications</label>
+                    <label><input type="radio" name="q7" value="B"> B) Projects requiring dynamic module loading</label>
+                    <label><input type="radio" name="q7" value="C"> C) Applications needing advanced error handling</label>
+                    <label><input type="radio" name="q7" value="D"> D) New projects focusing on performance and scalability</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What does the error message "exports is not defined" indicate when using native ECMAScript modules (ESM)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Missing import statement</label>
+                    <label><input type="radio" name="q8" value="B"> B) Incorrect use of <code>module.exports</code></label>
+                    <label><input type="radio" name="q8" value="C"> C) Node.js version incompatibility</label>
+                    <label><input type="radio" name="q8" value="D"> D) Attempting to use CommonJS syntax in an ESM environment</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. How can you resolve the "exports is not defined" error when using native ECMAScript modules (ESM)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) Add <code>"type": "module"</code> in <code>tsconfig.json</code></label>
+                    <label><input type="radio" name="q9" value="B"> B) Use <code>.cjs</code> file extension instead of <code>.js</code></label>
+                    <label><input type="radio" name="q9" value="C"> C) Update Node.js to the latest version</label>
+                    <label><input type="radio" name="q9" value="D"> D) Switch to CommonJS module syntax</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What tool is commonly used to manage ECMAScript modules (ESM) in TypeScript projects?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) webpack</label>
+                    <label><input type="radio" name="q10" value="B"> B) Babel</label>
+                    <label><input type="radio" name="q10" value="C"> C) Rollup</label>
+                    <label><input type="radio" name="q10" value="D"> D) ts-node</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

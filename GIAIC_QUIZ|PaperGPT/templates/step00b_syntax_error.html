@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Error Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Error Quiz</h1>
+
+        <form id="quiz-form" method="post" action="/step00b_syntax_error">
+
+            <div class="question">
+                <p>1. What is the error in the following TypeScript code?</p>
+                <pre>
+<code>
+lett message = "Hello World";//syntax error
+console.log(message);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) Unexpected token 'lett'</label>
+                    <label><input type="radio" name="q1" value="B"> B) SyntaxError: Unexpected identifier</label>
+                    <label><input type="radio" name="q1" value="C"> C) TypeScriptError: Unknown keyword 'lett'</label>
+                    <label><input type="radio" name="q1" value="D"> D) TypeError: message is not defined</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. How can you fix the error in the code?</p>
+                <pre>
+<code>
+lett message = "Hello World";//syntax error
+console.log(message);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Change 'lett' to 'let'</label>
+                    <label><input type="radio" name="q2" value="B"> B) Remove the comment</label>
+                    <label><input type="radio" name="q2" value="C"> C) Add a semicolon after the assignment</label>
+                    <label><input type="radio" name="q2" value="D"> D) Change 'message' to a number</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What command would you use to compile a TypeScript file?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) node script.ts</label>
+                    <label><input type="radio" name="q3" value="B"> B) tsc script.ts</label>
+                    <label><input type="radio" name="q3" value="C"> C) npm run build</label>
+                    <label><input type="radio" name="q3" value="D"> D) tsc build script.ts</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. What does tsc stand for in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) TypeScript Compiler</label>
+                    <label><input type="radio" name="q4" value="B"> B) TypeScript Console</label>
+                    <label><input type="radio" name="q4" value="C"> C) TypeScript Check</label>
+                    <label><input type="radio" name="q4" value="D"> D) TypeScript Code</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What is the primary purpose of TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) To add static typing to JavaScript</label>
+                    <label><input type="radio" name="q5" value="B"> B) To replace JavaScript in web development</label>
+                    <label><input type="radio" name="q5" value="C"> C) To add new features to JavaScript</label>
+                    <label><input type="radio" name="q5" value="D"> D) To remove semicolons from JavaScript</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Which data type would TypeScript infer for the variable 'message' in the corrected code?</p>
+                <pre>
+<code>
+let message = "Hello World";
+console.log(message);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) number</label>
+                    <label><input type="radio" name="q6" value="B"> B) string</label>
+                    <label><input type="radio" name="q6" value="C"> C) boolean</label>
+                    <label><input type="radio" name="q6" value="D"> D) undefined</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What is the correct way to declare a variable in TypeScript?</p>
+                <pre>
+<code>
+let message: string = "Hello World";
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) let message = "Hello World";</label>
+                    <label><input type="radio" name="q7" value="B"> B) let message;</label>
+                    <label><input type="radio" name="q7" value="C"> C) let message: any;</label>
+                    <label><input type="radio" name="q7" value="D"> D) let message: number;</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What is the role of TypeScript in web development?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) To replace HTML</label>
+                    <label><input type="radio" name="q8" value="B"> B) To add styling to websites</label>
+                    <label><input type="radio" name="q8" value="C"> C) To add dynamic content to web pages</label>
+                    <label><input type="radio" name="q8" value="D"> D) To add type safety and catch errors in JavaScript</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. What will TypeScript do if you try to assign a number to a variable declared as string?</p>
+                <pre>
+<code>
+let message: string = "Hello World";
+message = 123;
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) No error</label>
+                    <label><input type="radio" name="q9" value="B"> B) TypeError: Type 'number' is not assignable to type 'string'</label>
+                    <label><input type="radio" name="q9" value="C"> C) TypeError: Type '123' is not assignable to type 'string'</label>
+                    <label><input type="radio" name="q9" value="D"> D) SyntaxError: Unexpected number</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. Which TypeScript feature helps catch errors during development?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) TypeScript Debugger</label>
+                    <label><input type="radio" name="q10" value="B"> B) TypeScript Inspector</label>
+                    <label><input type="radio" name="q10" value="C"> C) TypeScript Linter</label>
+                    <label><input type="radio" name="q10" value="D"> D) TypeScript Type Checker</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

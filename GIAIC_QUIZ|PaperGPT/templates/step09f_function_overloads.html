@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .question pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz: Function Overloads</h1>
+
+        <form id="quiz-form" method="post" action="/step09f_function_overloads">
+
+            <div class="question">
+                <p>1. What are function overloads used for in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) To create multiple implementations of a function with the same name</label>
+                    <label><input type="radio" name="q1" value="B"> B) To handle different parameter types and return types with type-checked calls</label>
+                    <label><input type="radio" name="q1" value="C"> C) To optimize the performance of functions</label>
+                    <label><input type="radio" name="q1" value="D"> D) To avoid using generic types</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. How should function overloads be ordered?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) From least specific to most specific</label>
+                    <label><input type="radio" name="q2" value="B"> B) From most specific to least specific</label>
+                    <label><input type="radio" name="q2" value="C"> C) Randomly, as long as they cover all cases</label>
+                    <label><input type="radio" name="q2" value="D"> D) Alphabetically by parameter names</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What happens if a function call matches multiple overloads?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) TypeScript throws an error and requires explicit casting</label>
+                    <label><input type="radio" name="q3" value="B"> B) The first overload in the list is executed</label>
+                    <label><input type="radio" name="q3" value="C"> C) TypeScript determines the most specific overload and executes it</label>
+                    <label><input type="radio" name="q3" value="D"> D) Function overloads are ignored in such cases</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Which statement about function implementations in TypeScript is correct?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) An implementation must always match one of the overloads</label>
+                    <label><input type="radio" name="q4" value="B"> B) Overloads are not required if the implementation covers all cases</label>
+                    <label><input type="radio" name="q4" value="C"> C) Overloads can have different names from the implementation</label>
+                    <label><input type="radio" name="q4" value="D"> D) Overloads are optional in TypeScript</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What does the following TypeScript code illustrate?</p>
+                <pre><code>
+function add(arg1: string, arg2: string): string;
+function add(arg1: number, arg2: number): number;
+function add(arg1: boolean, arg2: boolean): boolean;
+function add(arg1: any, arg2: any): any {
+    return arg1 + arg2;
+}
+                </code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) A generic function definition</label>
+                    <label><input type="radio" name="q5" value="B"> B) Function overloads providing type-checked calls</label>
+                    <label><input type="radio" name="q5" value="C"> C) A function with default parameters</label>
+                    <label><input type="radio" name="q5" value="D"> D) A function using the arguments object</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Which of the following is NOT a requirement for function overloads in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Overloads must have the same function name</label>
+                    <label><input type="radio" name="q6" value="B"> B) Overloads must have different parameter types</label>
+                    <label><input type="radio" name="q6" value="C"> C) Overloads must have the same return type</label>
+                    <label><input type="radio" name="q6" value="D"> D) Overloads must cover all possible parameter combinations</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What is the advantage of using function overloads in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Improved performance of function calls</label>
+                    <label><input type="radio" name="q7" value="B"> B) Enhanced type safety and clarity of function usage</label>
+                    <label><input type="radio" name="q7" value="C"> C) Reduced number of function definitions</label>
+                    <label><input type="radio" name="q7" value="D"> D) Compatibility with older JavaScript versions</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. How do TypeScript function overloads contribute to code maintainability?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) By allowing different implementations for different environments</label>
+                    <label><input type="radio" name="q8" value="B"> B) By making it easier to write generic functions</label>
+                    <label><input type="radio" name="q8" value="C"> C) By reducing the need for comments and documentation</label>
+                    <label><input type="radio" name="q8" value="D"> D) By providing clear and precise function signatures</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Which TypeScript feature complements function overloads for handling diverse input scenarios?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) Default parameters</label>
+                    <label><input type="radio" name="q9" value="B"> B) Generics</label>
+                    <label><input type="radio" name="q9" value="C"> C) Type assertions</label>
+                    <label><input type="radio" name="q9" value="D"> D) Union types</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. When should you use function overloads in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) Only when working with asynchronous functions</label>
+                    <label><input type="radio" name="q10" value="B"> B) When the same function name has different behaviors based on input types</label>
+                    <label><input type="radio" name="q10" value="C"> C) To improve performance of function calls</label>
+                    <label><input type="radio" name="q10" value="D"> D) Only when working with large-scale applications</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

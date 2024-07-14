@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .question pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz: Functions</h1>
+
+        <form id="quiz-form" method="post" action="/step09a_functions">
+
+            <div class="question">
+                <p>1. How do you declare a function in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) function myFunction() {}</label>
+                    <label><input type="radio" name="q1" value="B"> B) const myFunction = () =&gt; {};</label>
+                    <label><input type="radio" name="q1" value="C"> C) method myFunction() {}</label>
+                    <label><input type="radio" name="q1" value="D"> D) declare function myFunction() {}</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. What is the return type of the following TypeScript function definition?<br><br>
+                <pre>function add(a: number, b: number): number {
+    return a + b;
+}</pre></p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) number</label>
+                    <label><input type="radio" name="q2" value="B"> B) void</label>
+                    <label><input type="radio" name="q2" value="C"> C) undefined</label>
+                    <label><input type="radio" name="q2" value="D"> D) null</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. How do you define optional parameters in a TypeScript function?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) function myFunction(param?: string) {}</label>
+                    <label><input type="radio" name="q3" value="B"> B) function myFunction(param: string = '') {}</label>
+                    <label><input type="radio" name="q3" value="C"> C) function myFunction(param!: string) {}</label>
+                    <label><input type="radio" name="q3" value="D"> D) function myFunction(param: string!) {}</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. How do you define default parameter values in a TypeScript function?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) function myFunction(param: string = '') {}</label>
+                    <label><input type="radio" name="q4" value="B"> B) function myFunction(param?: string) {}</label>
+                    <label><input type="radio" name="q4" value="C"> C) function myFunction(param!: string) {}</label>
+                    <label><input type="radio" name="q4" value="D"> D) function myFunction(param: string!) {}</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. How do you define rest parameters in a TypeScript function?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) function myFunction(...params: string[]) {}</label>
+                    <label><input type="radio" name="q5" value="B"> B) function myFunction(...params: string) {}</label>
+                    <label><input type="radio" name="q5" value="C"> C) function myFunction(params...: string[]) {}</label>
+                    <label><input type="radio" name="q5" value="D"> D) function myFunction(...params: []) {}</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What TypeScript keyword is used to indicate a function that doesn't return a value?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) void</label>
+                    <label><input type="radio" name="q6" value="B"> B) null</label>
+                    <label><input type="radio" name="q6" value="C"> C) undefined</label>
+                    <label><input type="radio" name="q6" value="D"> D) never</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. How do you define a function type in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) type MyFunctionType = (param: number) =&gt; void;</label>
+                    <label><input type="radio" name="q7" value="B"> B) interface MyFunctionType(param: number): void;</label>
+                    <label><input type="radio" name="q7" value="C"> C) function MyFunctionType(param: number): void;</label>
+                    <label><input type="radio" name="q7" value="D"> D) declare function MyFunctionType(param: number): void;</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What TypeScript function syntax allows you to create a short arrow function with a single statement?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) function myFunction() =&gt; {};</label>
+                    <label><input type="radio" name="q8" value="B"> B) const myFunction = () =&gt; {};</label>
+                    <label><input type="radio" name="q8" value="C"> C) function myFunction() =&gt; '';</label>
+                    <label><input type="radio" name="q8" value="D"> D) const myFunction: Function = () =&gt; {};</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Which TypeScript function syntax is used to define a function that can have different types of arguments?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) function myFunction(param: any) {}</label>
+                    <label><input type="radio" name="q9" value="B"> B) function myFunction(param: unknown) {}</label>
+                    <label><input type="radio" name="q9" value="C"> C) function myFunction(...params: any[]) {}</label>
+                    <label><input type="radio" name="q9" value="D"> D) function myFunction(...params: unknown[]) {}</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. How do you execute a TypeScript function defined as a method of an object?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) object.myFunction();</label>
+                    <label><input type="radio" name="q10" value="B"> B) this.myFunction();</label>
+                    <label><input type="radio" name="q10" value="C"> C) myFunction(object);</label>
+                    <label><input type="radio" name="q10" value="D"> D) object.myFunction;</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+
+        </form>
+
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

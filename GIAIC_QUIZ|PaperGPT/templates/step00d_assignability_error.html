@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Syntax Error Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Syntax Error Quiz</h1>
+
+        <form id="quiz-form" method="post" action="/step00d_assignability_error">
+
+            <div class="question">
+                <p>1. What is the error in the following TypeScript code?</p>
+                <pre>
+<code>
+let message = "Hello World";
+message = 6;
+console.log(message);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) ReferenceError: message is not defined</label>
+                    <label><input type="radio" name="q1" value="B"> B) SyntaxError: Unexpected number</label>
+                    <label><input type="radio" name="q1" value="C"> C) TypeError: Type 'number' is not assignable to type 'string'</label>
+                    <label><input type="radio" name="q1" value="D"> D) TS2322: Type 'number' is not assignable to type 'string'</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. How can you fix the error in the code?</p>
+                <pre>
+<code>
+let message = "Hello World";
+message = 6;
+console.log(message);
+</code>
+                </pre>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Change 'message = 6;' to 'message = "6";'</label>
+                    <label><input type="radio" name="q2" value="B"> B) Change 'let message' to 'let message: number'</label>
+                    <label><input type="radio" name="q2" value="C"> C) Remove 'console.log(message);'</label>
+                    <label><input type="radio" name="q2" value="D"> D) Add a type assertion to 'message'</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What does TS2322 error indicate in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Type mismatch error</label>
+                    <label><input type="radio" name="q3" value="B"> B) Undefined variable error</label>
+                    <label><input type="radio" name="q3" value="C"> C) Syntax error</label>
+                    <label><input type="radio" name="q3" value="D"> D) Property does not exist error</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. How does TypeScript help catch errors in the code?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) By automatically fixing errors</label>
+                    <label><input type="radio" name="q4" value="B"> B) By displaying detailed error messages</label>
+                    <label><input type="radio" name="q4" value="C"> C) By ignoring errors during compilation</label>
+                    <label><input type="radio" name="q4" value="D"> D) By converting all errors to warnings</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Which TypeScript feature helps ensure type safety?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) Type inference</label>
+                    <label><input type="radio" name="q5" value="B"> B) Dynamic typing</label>
+                    <label><input type="radio" name="q5" value="C"> C) Type assertions</label>
+                    <label><input type="radio" name="q5" value="D"> D) Static typing</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is the primary benefit of TypeScript over JavaScript in large applications?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Faster execution</label>
+                    <label><input type="radio" name="q6" value="B"> B) Better memory management</label>
+                    <label><input type="radio" name="q6" value="C"> C) Enhanced code readability</label>
+                    <label><input type="radio" name="q6" value="D"> D) Type safety and error detection</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What role does TypeScript play in modern web development?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Rendering HTML elements</label>
+                    <label><input type="radio" name="q7" value="B"> B) Managing server-side logic</label>
+                    <label><input type="radio" name="q7" value="C"> C) Adding interactivity to websites</label>
+                    <label><input type="radio" name="q7" value="D"> D) Enhancing JavaScript with static types</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. Which command is used to compile TypeScript code into JavaScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) tsc script.ts</label>
+                    <label><input type="radio" name="q8" value="B"> B) node script.ts</label>
+                    <label><input type="radio" name="q8" value="C"> C) npm run build</label>
+                    <label><input type="radio" name="q8" value="D"> D) compile script.ts</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. What is the main purpose of TypeScript type annotations?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) To add styling to code</label>
+                    <label><input type="radio" name="q9" value="B"> B) To improve performance</label>
+                    <label><input type="radio" name="q9" value="C"> C) To provide type information to variables</label>
+                    <label><input type="radio" name="q9" value="D"> D) To minimize code size</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What does TypeScript use to infer variable types when type annotations are not specified?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) Type assertions</label>
+                    <label><input type="radio" name="q10" value="B"> B) Static typing</label>
+                    <label><input type="radio" name="q10" value="C"> C) Type inference</label>
+                    <label><input type="radio" name="q10" value="D"> D) Dynamic typing</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>

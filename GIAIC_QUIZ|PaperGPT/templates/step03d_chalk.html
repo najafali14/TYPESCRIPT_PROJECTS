@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Quiz with Chalk Module</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+        .question pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript Quiz with Chalk Module</h1>
+
+        <form id="quiz-form" method="post" action="/step03d_chalk">
+
+            <div class="question">
+                <p>1. What is the output of the following TypeScript code using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+let message = chalk.blue('Hello World');
+console.log(message);
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) "Hello World"</label>
+                    <label><input type="radio" name="q1" value="B"> B) "Hello World" in blue color</label>
+                    <label><input type="radio" name="q1" value="C"> C) Error: chalk module not found</label>
+                    <label><input type="radio" name="q1" value="D"> D) Undefined</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. How would you print "Hello World" in red color using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+console.log(chalk.red('Hello World'));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) console.log(chalk.red('Hello World'));</label>
+                    <label><input type="radio" name="q2" value="B"> B) console.log(chalk.blue('Hello World'));</label>
+                    <label><input type="radio" name="q2" value="C"> C) console.log(chalk.green('Hello World'));</label>
+                    <label><input type="radio" name="q2" value="D"> D) console.log(chalk.yellow('Hello World'));</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What is the output of the following TypeScript code using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+let message: string = "Hello World";
+console.log(chalk.yellow(message));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Error: chalk module not found</label>
+                    <label><input type="radio" name="q3" value="B"> B) "Hello World" in yellow color</label>
+                    <label><input type="radio" name="q3" value="C"> C) Undefined</label>
+                    <label><input type="radio" name="q3" value="D"> D) "Hello World"</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. How can you underline "Hello World" using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+console.log(chalk.underline('Hello World'));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) console.log(chalk.bold('Hello World'));</label>
+                    <label><input type="radio" name="q4" value="B"> B) console.log(chalk.italic('Hello World'));</label>
+                    <label><input type="radio" name="q4" value="C"> C) console.log(chalk.underline('Hello World'));</label>
+                    <label><input type="radio" name="q4" value="D"> D) console.log(chalk.strikethrough('Hello World'));</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What is the output of the following TypeScript code using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+let message: string = "TypeScript";
+console.log(chalk.bgBlue.white.bold(message));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) Error: chalk module not found</label>
+                    <label><input type="radio" name="q5" value="B"> B) "TypeScript" in bold white text with blue background</label>
+                    <label><input type="radio" name="q5" value="C"> C) "TypeScript" in blue color</label>
+                    <label><input type="radio" name="q5" value="D"> D) "TypeScript" with white background and blue border</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Which Chalk method would you use to highlight "Hello World" in inverse colors?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+console.log(chalk.inverse('Hello World'));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) chalk.bold('Hello World');</label>
+                    <label><input type="radio" name="q6" value="B"> B) chalk.italic('Hello World');</label>
+                    <label><input type="radio" name="q6" value="C"> C) chalk.inverse('Hello World');</label>
+                    <label><input type="radio" name="q6" value="D"> D) chalk.strikethrough('Hello World');</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. How would you combine multiple Chalk styles to print "Hello World" in bold and underlined?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+console.log(chalk.bold.underline('Hello World'));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) console.log(chalk.bold.underline('Hello World'));</label>
+                    <label><input type="radio" name="q7" value="B"> B) console.log(chalk.italic.underline('Hello World'));</label>
+                    <label><input type="radio" name="q7" value="C"> C) console.log(chalk.bold.italic('Hello World'));</label>
+                    <label><input type="radio" name="q7" value="D"> D) console.log(chalk.strikethrough.bold('Hello World'));</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What is the output of the following TypeScript code using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+let message: string = "Hello";
+console.log(chalk.red(message) + ' ' + chalk.blue('World'));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Error: chalk module not found</label>
+                    <label><input type="radio" name="q8" value="B"> B) "Hello World" in red and blue colors respectively</label>
+                    <label><input type="radio" name="q8" value="C"> C) "Hello" in red color and "World" in blue color</label>
+                    <label><input type="radio" name="q8" value="D"> D) "Hello World" in inverse colors</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. How would you print "Hello World" in bold and yellow colors using the Chalk module?</p>
+                <pre><code>
+import chalk from 'chalk';
+
+console.log(chalk.bold.yellow('Hello World'));
+</code></pre>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) console.log(chalk.red.bold('Hello World'));</label>
+                    <label><input type="radio" name="q9" value="B"> B) console.log(chalk.green.bold('Hello World'));</label>
+                    <label><input type="radio" name="q9" value="C"> C) console.log(chalk.yellow.bold('Hello World'));</label>
+                    <label><input type="radio" name="q9" value="D"> D) console.log(chalk.blue.bold('Hello World'));</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What is the purpose of using the Chalk module in TypeScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) To format TypeScript code</label>
+                    <label><input type="radio" name="q10" value="B"> B) To apply colors and styles to console output</label>
+                    <label><input type="radio" name="q10" value="C"> C) To convert TypeScript types to JavaScript</label>
+                    <label><input type="radio" name="q10" value="D"> D) To generate TypeScript documentation</label>
+                </div>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name ">
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div style="width: 2in; height: 1in; background: #fff; border: 2px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 12px; padding: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; font-family: 'Arial', sans-serif; margin-left:40%">
+        <h1 style="font-size: 0.25in; margin: 0; color: #2c3e50; color:green;">GIAIC QUIZ</h1>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Name: {{ ql[10] }}</b></p>
+        <p style="font-size: 0.18in; margin: 4px 0 0 0; color: #34495e;"><b>Marks:  {{ marks }}/50</b></p>
+    </div>
+    <h5 style="color:red;margin-left:20%">{{ feedback }}</h5>
+</body>
+</html>
