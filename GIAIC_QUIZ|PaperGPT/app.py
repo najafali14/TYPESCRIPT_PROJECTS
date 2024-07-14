@@ -904,7 +904,7 @@ def hello_world():
     btn = None
     # data2 = None
 
-    genai.configure(api_key='AIzaSyDZVaeCYR5DeUwGOvFJWhapQ-b7psA5eIk')
+    genai.configure(api_key='YOUR API KEY')
     model = genai.GenerativeModel(model_name='gemini-1.5-flash')
     chat = model.start_chat(enable_automatic_function_calling=True)
     # inp = input('Enter your prompt...')
